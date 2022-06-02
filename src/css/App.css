@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+:root {
+    --primary: #99A9AF;
+    --secondary: #609986;
+    --font-color: #ffffff;
+    --hover-text: #5addb1;
+    --background: #DBD3D8;
+    /*
+    --background: linear-gradient(210deg, #4b6cb7 0%, #182848 100%);
+*/
+    /* JSON WEB TOKEN */
+    --jwt-header: #fc357d;
+    --jwt-payload: #d63aff;
+    --jwt-signature: #00b9f1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background: var(--background);
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    width: 100%;
+    padding: 15px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 3rem;
+    font-size: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    transition: all ease-in-out .2s;
+    border-bottom: 4px solid transparent;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+code,
+label,
+a,
+button,
+summary,
+li {
+    color: var(--font-color);
+}
+
+a:hover, a:focus {
+    color: var(--hover-text);
+    border-bottom: 4px solid var(--hover-text);
+}
+
+a:visited {
+    text-decoration: none;
+    transition: all ease-in-out .2s;
+    border-bottom: 4px solid transparent;       
+}
+
+.header-container {
+    width: 70%;
+    margin: 0 auto;
+    background-color: var(--secondary);
+    padding: 2em;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.header-container > div {
+    margin: 1rem 0 1rem 0;
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+h3 {
+    font-size: 2.5em;
+}
+
+.p-lg {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.header-container p {
+    text-decoration: overline;
+}
+
+main {
+    width: 100%;
+    padding: 15px;
+}
+
+.content {
+    width: 70%;
+    margin: 0 auto;
+    background-color: var(--secondary);
+    padding: 2em;
+    border-radius: 15px;
+}
+
+.active {
+    color: var(--hover-text); 
+    border-bottom: 4px solid var(--hover-text);
+}
+
+.content h2 {
+    border-bottom: 4px solid var(--hover-text);
+    padding-bottom: 0.75em;
+}
+
+#view, .info {
+    margin-top: 2em;
+}
+
+details {
+    padding: 5px;
+}
+
+details[open] > summary {
+    color: var(--hover-text);
+}
+
+summary {
+    font-weight: bold;
+}
+
+summary, summary:focus {
+    transition: all ease-in-out .2s;
+}
+
+summary:hover, summary:focus {
+    color: var(--hover-text);
+}
+
+details ul {
+    font-size: 1em;
+    display: flex;
+    gap: 15px;
+    padding-left: 2em;
+    border-left: 4px solid var(--hover-text);
+    padding: 1em 2em 1em 2em;
+}
+
+li {
+    line-height: 2em;
+}
+
+
+@keyframes details-show {
+    from {
+    opacity:0;
+    transform: var(--details-translate, translateY(-0.5em));
+    }
+}
+
+details[open] > *:not(summary) {
+    animation: details-show 225ms ease-in-out;
+}
+
+
+
+/*JSON WEB TOKEN EXAMPLE*/
+.jwt-token-example {
+    word-wrap: break-word;
+    white-space: pre-warp;
+    word-break: normal;
+    max-width: 40%;
+    font-weight: bold;
+}
+
+#jwt-examples {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.jwt-header {
+    color: var(--jwt-header);
+}
+
+.jwt-payload {
+    color: var(--jwt-payload);
+}
+
+.jwt-signature {
+    color: var(--jwt-signature);
+}
+
+.jwt-links {
+    line-height: 1em;
+}
+
+code {
+    font-size: 1.2em;
+    background-color: var(--hover-text);
+    padding: 3px;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+button {
+    height: 3rem;
+    min-width:4rem;
+    max-width:320px;
+    width: 100%;
+    margin: 0 auto;
+    transition: all ease-in-out .2s;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--hover-text);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 1em;
+}
+
+button:hover, button:focus {
+    background-color: var(--jwt-signature);
+    cursor: pointer;
+}
+
+.insert_wrapper {
+    padding: 2rem;
+}
+
+.insertUser {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;    
+    align-content: center;
+    background-color: var(--hover-text);
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: var(--hover-text);
+    border-radius: 25px;
+    padding: 2em;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+fieldset {
+    outline: none;
+    border: none;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+input {
+    margin: 0 auto;
+    width: 100%;
+    height: 3rem;
+    border-radius: 15px;
+    padding-left: 15px;
+    outline: none;
+    border: 4px solid transparent; 
+    transition: all ease-in-out .2s;
+    margin-bottom: 0.5em;
+    font-size: 1.25em;
+}
+
+input:focus, input:hover {
+    border: 4px solid var(--jwt-signature);
+}
+
+label {
+    margin-top: 0.5em;
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.25em;
+    font-weight: bold;
+    font-size: 1.75em;
+}
+
+.userList {
+    display: flex;
+    flex-flow: column;
+    gap: 2em;
+}
+
+.user {
+    border-bottom: 5px solid var(--hover-text);
+    padding: 2em;
+}
+
+.userInfo {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.userInfo p {
+    font-size: 1.75em;
+}
+
+.userName, .userAge {
+    min-width: 4rem;
+    max-width: 320px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--secondary);
+    font-weight: bold;
+}
+
+#login_submit {
+    height: 3rem;
+    min-width:4rem;
+    max-width:320px;
+    width: 100%;
+    margin: 0 auto;
+    transition: all ease-in-out .2s;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--hover-text);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 1em;
+    color: var(--font-color);
+}
+
+#login_submit:hover {
+    background-color: var(--jwt-signature);
+    cursor: pointer;
+}
